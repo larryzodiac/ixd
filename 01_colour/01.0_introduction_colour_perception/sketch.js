@@ -7,6 +7,8 @@
 // http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_0_01
 // https://p5js.org/reference/#/p5/colorMode
 // ------------------------------------------------- //
+'use strict';
+
 let canvasSize;
 let hueRange;
 

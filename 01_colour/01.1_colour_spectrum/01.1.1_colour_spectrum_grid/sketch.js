@@ -1,13 +1,13 @@
 // ------------------------------------------------- //
 // 17/09/2018
 // Evan MacHale - N00150552
+// Colour Spectrum in a Grid
+// P_1_1_1_01 in Book
+// http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_1_1_01
 // ------------------------------------------------- //
 'use strict';
 
 let canvasSize;
-
-// let stepX;
-// let stepY;
 
 function setup() {
   canvasSize = $('#canvas').width();
@@ -18,14 +18,14 @@ function setup() {
 }
 
 function draw() {
-  var numOfCols = 100;
-  var numOfRows = 100;
-  var stepX = width/numOfCols;
-  var stepY = height/numOfRows;
+  let numOfCols = 100;
+  let numOfRows = 100;
+  let stepX = width / numOfCols;
+  let stepY = height / numOfRows;
 
-  for(var gridY = 0; gridY < height; gridY += stepY) {
-    for(var gridX = 0; gridX < width; gridX += stepX) {
-      fill(gridX, 100, 100);
+  for(let gridY = 0; gridY < height; gridY += stepY) {
+    for(let gridX = 0; gridX < width; gridX += stepX) {
+      fill(gridX, height - gridY, 100);
       rect(gridX, gridY, stepX, stepY);
     }
   }
