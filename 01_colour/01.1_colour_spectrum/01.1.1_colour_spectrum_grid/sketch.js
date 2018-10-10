@@ -8,6 +8,8 @@
 'use strict';
 
 let canvasSize;
+let stepX;
+let stepY;
 
 function setup() {
   canvasSize = $('#canvas').width();
@@ -15,13 +17,16 @@ function setup() {
   canvas.parent('canvas');
   colorMode(HSB, width, height, 100);
   noStroke();
+  console.log(`Width is ${width}`);
 }
 
 function draw() {
-  let numOfCols = 100;
-  let numOfRows = 100;
-  let stepX = width / numOfCols;
-  let stepY = height / numOfRows;
+  let stepX = width / floor(map(constrain(mouseX, 0, width), width, 0, 2, 100));
+  let stepY = height / floor(map(constrain(mouseY, 0, height), height, 0, 2, 100));
+
+  // let stepxx = mouseX + 2;
+  // let stepyy = mouseY + 2;
+  // console.log(stepxx);
 
   for(let gridY = 0; gridY < height; gridY += stepY) {
     for(let gridX = 0; gridX < width; gridX += stepX) {
@@ -30,18 +35,6 @@ function draw() {
     }
   }
 }
-
-// function draw() {
-//   stepX = mouseX + 20;
-//   stepY = mouseY + 20;
-//
-//   for (var gridY = 0; gridY < height; gridY += stepY) {
-//     for (var gridX = 0; gridX < width; gridX += stepX) {
-//       fill(gridX, height - gridY, 100);
-//       rect(gridX, gridY, stepX, stepY);
-//     }
-//   }
-// }
 
 function keyPressed(){
   if(key==='s' || key==='S'){
