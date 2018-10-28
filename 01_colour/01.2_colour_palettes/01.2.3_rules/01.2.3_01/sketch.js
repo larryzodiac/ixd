@@ -3,6 +3,7 @@
 // Evan MacHale - N00150552.
 // Colour Palettes w/ Rules.
 // P_1_2_3_01 in Book.
+// Generating specific color palettes.
 // http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_2_3_01
 // ------------------------------------------------- //
 'use strict';
