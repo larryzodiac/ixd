@@ -89,9 +89,9 @@ function draw() {
       const posY = tileHeight * gridY;
 
       /*
-        Index constiable used to iterate through our arrays.
+        Index variable used to iterate through our arrays.
         When the grid is drawn, the colours are selecteds from the arrays one-by-one.
-        The counter constiable is used to iterate through the same values for our specified rule
+        The counter variable is used to iterate through the same values for our specified rule
         using the modulo operator.
         When currentTileCountX = 3, the HSB indexes held will be 0,1,2,0,1,2...
         Meaning only the first three colours in the arrays are used in the grid.
