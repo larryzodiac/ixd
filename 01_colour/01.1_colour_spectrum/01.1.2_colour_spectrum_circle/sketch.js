@@ -9,11 +9,13 @@
 
 let canvasSize;
 
-let segments = 360;
-let angleStep = 360 / segments;
-let radius = 200;
+let segments;
+let angleStep;
+const radius = 200;
 
 function setup() {
+  // Responsive jQuery canvas.
+  // Can manipulate dimensions using css.
   canvasSize = $('#canvas').width();
   let canvas = createCanvas(canvasSize,canvasSize);
   canvas.parent('canvas');
@@ -22,16 +24,30 @@ function setup() {
 }
 
 function draw() {
+  // Mouse co-ordinate values constrained within canvas dimensions.
+  // Used to alter number of segments in circle.
+  // Cool effect I found:
+  // background(0);
+  segments = width / map(constrain(mouseX, 0, width), width, 0, 1, width);
+  angleStep = 360 / segments;
+  // https://p5js.org/reference/#/p5/beginShape
+  // Triangle fan shape used to define segments.
+  // First vertex is centre point, rest are surrounding points.
   beginShape(TRIANGLE_FAN);
     vertex(width / 2, height / 2);
-    for (var angle = 0; angle <= 360; angle += angleStep) {
-      var vx = width / 2 + cos(radians(angle)) * radius;
-      var vy = height / 2 + sin(radians(angle)) * radius;
+    for (let angle = 0; angle <= 360; angle += angleStep) {
+      const vx = width / 2 + cos(radians(angle)) * radius;
+      const vy = height / 2 + sin(radians(angle)) * radius;
       vertex(vx, vy);
-      fill(angle, mouseX, mouseY);
+      fill(angle, mouseY, width);
     }
   endShape();
 }
+
+// ------------------------------------------------- //
+// Key Options from Book.
+// Download Option.
+// ------------------------------------------------- //
 
 function keyPressed(){
   if(key==='s' || key==='S'){

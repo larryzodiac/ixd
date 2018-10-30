@@ -8,26 +8,24 @@
 'use strict';
 
 let canvasSize;
-let stepX;
-let stepY;
 
 function setup() {
+  // Responsive jQuery canvas.
+  // Can manipulate dimensions using css.
   canvasSize = $('#canvas').width();
   let canvas = createCanvas(canvasSize,canvasSize);
   canvas.parent('canvas');
   colorMode(HSB, width, height, 100);
   noStroke();
-  console.log(`Width is ${width}`);
 }
 
 function draw() {
-  let stepX = width / floor(map(constrain(mouseX, 0, width), width, 0, 2, 100));
-  let stepY = height / floor(map(constrain(mouseY, 0, height), height, 0, 2, 100));
-
-  // let stepxx = mouseX + 2;
-  // let stepyy = mouseY + 2;
-  // console.log(stepxx);
-
+  // Constrain mouse co-ordinates to canvas dimensions.
+  // Constraints used to manipulate number of tiles in x and y directions.
+  const stepX = width / floor(map(constrain(mouseX, 0, width), 0, width, 2, 100));
+  const stepY = height / floor(map(constrain(mouseY, 0, height), 0, height, 2, 100));
+  // Nested loops, outer for y-axis, inner for x-axis
+  // i.e for every row, draw columns
   for(let gridY = 0; gridY < height; gridY += stepY) {
     for(let gridX = 0; gridX < width; gridX += stepX) {
       fill(gridX, height - gridY, 100);
@@ -35,6 +33,11 @@ function draw() {
     }
   }
 }
+
+// ------------------------------------------------- //
+// Key Options from Book.
+// Download Option.
+// ------------------------------------------------- //
 
 function keyPressed(){
   if(key==='s' || key==='S'){
