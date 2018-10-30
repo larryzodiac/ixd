@@ -57,7 +57,7 @@ function draw() {
     If top left corner tileCountX = 1
     If top right, 40
     Why?
-    In draw, we will add/remove tiles to the value of these constiables
+    In draw, we will add/remove tiles to the value of these variables
     Also, tiles sizes will change dynamically
   */
   const currentTileCountX = int(map(mX, 0, width, 1, tileCountX));
@@ -89,9 +89,9 @@ function draw() {
       const posY = tileHeight * gridY;
 
       /*
-        Index constiable used to iterate through our arrays.
+        Index variable used to iterate through our arrays.
         When the grid is drawn, the colours are selecteds from the arrays one-by-one.
-        The counter constiable is used to iterate through the same values for our specified rule
+        The counter variable is used to iterate through the same values for our specified rule
         using the modulo operator.
         When currentTileCountX = 3, the HSB indexes held will be 0,1,2,0,1,2...
         Meaning only the first three colours in the arrays are used in the grid.
