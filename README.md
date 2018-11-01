@@ -1,3 +1,4 @@
+```
 // ------------------------------------------------- //
 // 1/11/2018
 // Evan MacHale - N00150552.
@@ -102,3 +103,4 @@ Agent.prototype.update1 = function(noiseScale, noiseStrength, strokeWidth) {
   this.angle = noise(this.vector.x / noiseScale + frameCount/100, this.vector.y / noiseScale) * noiseStrength;
   this.update(strokeWidth);
 }
+```
