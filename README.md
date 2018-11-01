@@ -11,7 +11,7 @@ Workshop v1
 // Version 1
 // ------------------------------------------------- //
 // Text from pixels (grid) parametres
-let textTyped = "ABC";
+let textTyped = "X";
 
 let font;
 let fontSize = 250;
@@ -34,38 +34,47 @@ function setupText() {
 }
 // ------------------------------------------------- //
 // Noise 'agents' parametres
-var agents = [];
-var agentCount = 4000;
-var noiseScale = 300;
-var noiseStrength = 10;
-var overlayAlpha = 10;
-var agentAlpha = 90;
-var strokeWidth = 0.3;
-var drawMode = 1;
+let agents = [];
+let agentCount = 1;
+let noiseScale = 300;
+let noiseStrength = 10;
+let overlayAlpha = 10;
+let agentAlpha = 90;
+let strokeWidth = 0.3;
+let drawMode = 1;
 
 // ------------------------------------------------- //
 // Create agents / invoke graphic
 function setup() {
   createCanvas(windowWidth, windowHeight);
   setupText();
-  for(var i = 0; i < agentCount; i++) {
+  for(let i = 0; i < agentCount; i++) {
     agents[i] = new Agent();
   }
 }
 
 
 function draw() {
-  //
-  fill(255, overlayAlpha);
-  noStroke();
-  rect(0, 0, width, height);
-
   // Draw agents
   stroke(0, agentAlpha);
   for (let i = 0; i < agentCount; i++) {
-    if (drawMode == 1) agents[i].update1(noiseScale, noiseStrength, strokeWidth);
-    else agents[i].update2(noiseScale, noiseStrength, strokeWidth);
+    // Draw agent + apply noise movement
+    agents[i].update1(noiseScale, noiseStrength, strokeWidth);
+    // Find pos of every agent??????
+    // console.log(agents[i].vector.x);
+    // Loop through text graphic + check to see if overlap?????
+    for (let x = 0; x < textImg.width; x++) {
+      for (let y = 0; y < textImg.height; y++) {
+        // Calculate the index for the pixels array from x and y
+        // Index? pos of pixel? matches vector??
+        let index = (x + y * textImg.width) * 4;
+        let red = textImg.pixels[index];
+        // console.log(x,y);
+        // if (agents[i].vector.x ) {
+        //   ellipse(x, y, 2, 2);
+        // }
+      }
+    }
   }
 }
-
 ```
