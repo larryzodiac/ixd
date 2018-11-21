@@ -8,3 +8,4 @@ Brief: Create a book cover image for a generative colour design book.
 2. [Symmetry](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.2/index.html)
 3. [Colour Interpolation](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.3/index.html)
 4. [Parametrics](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.4/index.html)
+5. [Type](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.5/index.html)
