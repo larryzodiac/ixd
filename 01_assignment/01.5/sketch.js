@@ -32,13 +32,15 @@ const seed = (sketch) => {
     c2 = sketch.color('#ffd1ff');
     sketch.strokeCap(sketch.SQUARE);
 
-    sketch.fill(0);
     sketch.textFont(type);
     sketch.textSize(100);
-    sketch.text('Gestaltung', 100, 100);
   }
 
   sketch.draw = () => {
+
+    sketch.fill(0);
+    sketch.text('Gestaltung', 100, 100);
+
     sketch.translate(sketch.width/2,sketch.height/2);
     sketch.scale(2);
     sketch.frameRate(20);
