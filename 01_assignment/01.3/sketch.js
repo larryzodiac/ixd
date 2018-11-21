@@ -16,9 +16,10 @@ const seed = (sketch) => {
   sketch.setup = () => {
     const canvas = sketch.createCanvas(1240,1748);
     sketch.background(10);
+    // Default (HSB, 360, 100, 100, 1)
     sketch.colorMode(sketch.HSB);
-      c1 = sketch.color(sketch.random(255),sketch.random(100),sketch.random(255));
-      c2 = sketch.color(sketch.random(255),sketch.random(100),sketch.random(255));
+    c1 = sketch.color(sketch.random(255),sketch.random(100),sketch.random(255));
+    c2 = sketch.color(sketch.random(255),sketch.random(100),sketch.random(255));
     // c1 = sketch.color('#fa709a');
     // c2 = sketch.color('#fee140');
     sketch.strokeCap(sketch.SQUARE);
