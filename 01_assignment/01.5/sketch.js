@@ -33,7 +33,7 @@ const seed = (sketch) => {
     sketch.strokeCap(sketch.SQUARE);
     // Style
     sketch.textFont(type);
-    sketch.textSize(40);#
+    sketch.textSize(40);
     sketch.textAlign(CENTER, CENTER);
   }
 
