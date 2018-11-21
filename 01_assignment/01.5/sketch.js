@@ -31,6 +31,11 @@ const seed = (sketch) => {
     c1 = sketch.color('#fad0c4');
     c2 = sketch.color('#ffd1ff');
     sketch.strokeCap(sketch.SQUARE);
+
+    sketch.fill(190);
+    sketch.textFont(type);
+    sketch.textSize(100);
+    sketch.text('Gestaltung', 100, 100);
   }
 
   sketch.draw = () => {
