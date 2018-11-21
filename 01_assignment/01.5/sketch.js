@@ -31,13 +31,14 @@ const seed = (sketch) => {
     c1 = sketch.color('#fad0c4');
     c2 = sketch.color('#ffd1ff');
     sketch.strokeCap(sketch.SQUARE);
-
+    // Style
     sketch.textFont(type);
-    sketch.textSize(100);
+    sketch.textSize(40);
   }
 
   sketch.draw = () => {
 
+    // Draw text
     sketch.fill(0);
     sketch.text('Gestaltung', 100, 100);
 
