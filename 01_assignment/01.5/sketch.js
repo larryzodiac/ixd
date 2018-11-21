@@ -33,7 +33,8 @@ const seed = (sketch) => {
     sketch.strokeCap(sketch.SQUARE);
     // Style
     sketch.textFont(type);
-    sketch.textSize(40);
+    sketch.textSize(40);#
+    sketch.textAlign(CENTER, CENTER);
   }
 
   sketch.draw = () => {
@@ -42,7 +43,7 @@ const seed = (sketch) => {
     sketch.fill(0);
     sketch.text('Gestaltung', 100, 100);
 
-    // sketch.translate(sketch.width/2,sketch.height/2);
+    sketch.translate(sketch.width/2,sketch.height/2);
     sketch.scale(2);
     sketch.frameRate(20);
     sketch.background(250);
