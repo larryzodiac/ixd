@@ -34,7 +34,7 @@ const seed = (sketch) => {
     // Style
     sketch.textFont(type);
     sketch.textSize(40);
-    sketch.textAlign(CENTER, CENTER);
+    sketch.textAlign(sketch.CENTER);
   }
 
   sketch.draw = () => {
