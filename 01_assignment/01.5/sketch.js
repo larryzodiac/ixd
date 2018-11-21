@@ -42,7 +42,7 @@ const seed = (sketch) => {
     sketch.fill(0);
     sketch.text('Gestaltung', 100, 100);
 
-    sketch.translate(sketch.width/2,sketch.height/2);
+    // sketch.translate(sketch.width/2,sketch.height/2);
     sketch.scale(2);
     sketch.frameRate(20);
     sketch.background(250);
