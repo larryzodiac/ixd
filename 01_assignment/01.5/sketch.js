@@ -32,7 +32,7 @@ const seed = (sketch) => {
     c2 = sketch.color('#ffd1ff');
     sketch.strokeCap(sketch.SQUARE);
 
-    sketch.fill(190);
+    sketch.fill(0);
     sketch.textFont(type);
     sketch.textSize(100);
     sketch.text('Gestaltung', 100, 100);
