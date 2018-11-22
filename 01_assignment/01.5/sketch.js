@@ -1,5 +1,5 @@
 // ------------------------------------------------- //
-// 21/11/2018
+// 22/11/2018
 // Evan MacHale - N00150552
 // Continuous Assessment 01.
 // Generative Design Colour Experiment.
@@ -10,6 +10,7 @@
 let time = 0;
 
 const numLines = 45;
+const offset = 300;
 let c1, c2, colour;
 let type;
 
@@ -33,29 +34,26 @@ const seed = (sketch) => {
     sketch.strokeCap(sketch.SQUARE);
     // Style
     sketch.textFont(type);
-    sketch.textSize(40);
-    sketch.textAlign(sketch.CENTER);
+    sketch.textSize(200);
   }
 
   sketch.draw = () => {
 
-    // Draw text
-    sketch.fill(0);
-    sketch.text('Gestaltung', 100, 100);
-
-    sketch.translate(sketch.width/2,sketch.height/2);
-    sketch.scale(2);
     sketch.frameRate(20);
     sketch.background(250);
 
     // Draw multiple lines.
+    sketch.push();
+    sketch.translate(sketch.width/2,sketch.height/2);
+    sketch.rotate(time/50);
+    // sketch.scale(4);
     for (let i = 0; i < numLines; i++) {
 
       // Interpolation.
       let amount = sketch.map(i, 0, numLines-1, 0, 1);
       colour = sketch.lerpColor(c1, c2, amount);
       sketch.stroke(colour);
-      sketch.strokeWeight(i/15);
+      sketch.strokeWeight(i/5);
 
       // Setup co-ordinates.
       let x1 = sketch.x1(time + i);
@@ -68,25 +66,44 @@ const seed = (sketch) => {
       sketch.line(-x1, -y1, -x2, -y2);
 
       // Wowee iterator.
-      time += Math.PI/sketch.frameCount;
+      time += Math.PI/100;
     };
+    sketch.pop();
+
+    // Draw text
+    sketch.title(sketch.width/5,sketch.height/3);
   }
 
   // Parametric Math functions.
   sketch.x1 = (t) => {
-    return Math.sin(t/50) * 100 + Math.sin(t/5) * 20;
+    // return Math.sin(t/50) * 100 + Math.sin(t/5) * 20;
+    return sketch.map(Math.sin(t/50), 0, 1, offset, sketch.width-offset)
   }
 
   sketch.y1 = (t) => {
-    return Math.cos(t/10) * 200;
+    // return Math.cos(t/10) * 200;
+    return sketch.map(Math.cos(t/20), 0, 1, offset, sketch.height-offset)
   }
 
   sketch.x2 = (t) => {
-    return Math.sin(t/10) * 200 + Math.sin(t) * 2;
+    // return Math.sin(t/10) * 200 + Math.sin(t) * 2;
+    return sketch.map(Math.sin(t/10), 0, 1, offset, sketch.width-offset)
   }
 
   sketch.y2 = (t) => {
-    return Math.cos(t/20) * 200 + Math.cos(t/10) * 30;
+    // return Math.cos(t/20) * 200 + Math.cos(t/10) * 30;
+    return sketch.map(Math.cos(t/20), 0, 1, offset, sketch.height-offset)
+  }
+
+  sketch.title = (x,y) => {
+    sketch.noStroke();
+    // sketch.fill(0,240,0);
+    // sketch.fill(0,0,255);
+    sketch.fill(0,0,240,180);
+    sketch.text('Genera-', x, y);
+    sketch.text('tive', x, y + 190);
+    sketch.text('Gestal-', x, y + 380);
+    sketch.text('tung', x, y + 570);
   }
 
   // Saving meaningful parametre data.
