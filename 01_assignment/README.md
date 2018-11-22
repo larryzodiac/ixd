@@ -1,4 +1,4 @@
-# Continuous Assessment 01 ~ Generative Design Colour Experiment
+# Continuous Assessment 01 ~ Generative Colour Experiment
 
 Brief: Create a book cover image for a generative colour design book.
 
@@ -9,3 +9,4 @@ Brief: Create a book cover image for a generative colour design book.
 3. [Colour Interpolation](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.3/index.html)
 4. [Parametrics](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.4/index.html)
 5. [Type](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.5/index.html)
+6. [Controlled Colour Set](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.6/index.html)
