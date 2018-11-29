@@ -13,3 +13,4 @@ Brief: Create a book cover image for a generative colour design book.
 7. [Final.0](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.7/index.html)
 8. [Final.1](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.8/index.html)
 9. [Final.2](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.9/index.html)
+10. [Final.3](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.10/index.html)
