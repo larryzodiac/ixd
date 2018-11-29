@@ -1,5 +1,5 @@
 // ------------------------------------------------- //
-// 22/11/2018
+// 29/11/2018
 // Evan MacHale - N00150552
 // Continuous Assessment 01.
 // Generative Design Colour Experiment.
@@ -10,7 +10,7 @@
 
 let time = 0; // Parametric variable.
 
-const numLines = 60; // Number of lines to draw.
+const numLines = 30; // Number of lines to draw.
 const offset = 300; // Page offset
 let c1, c2, colour; // Gradient c1 -> c2 + Interpolated colour
 let font; //Imported font.
@@ -23,7 +23,7 @@ const seed = (sketch) => {
   sketch.setup = () => {
     // Canvas A4.
     const canvas = sketch.createCanvas(1240,1748);
-    sketch.background(250);
+    sketch.background(16,100,100);
     // RGB is better for web gradients.
     sketch.colorMode(sketch.HSB);
     // Dertermined gradient.
@@ -37,19 +37,19 @@ const seed = (sketch) => {
   sketch.draw = () => {
 
     sketch.frameRate(20);
-    sketch.background(250);
+    // sketch.background(16,100,100);
 
     // Draw multiple lines.
     sketch.push();
-    sketch.translate(sketch.width/2,sketch.height/2);
-    // sketch.rotate(time/50);
+    sketch.translate(sketch.width/2,sketch.height/2.5);
+    sketch.rotate(time/20);
     for (let i = 0; i < numLines; i++) {
 
       // Interpolation.
       let amount = sketch.map(i, 0, numLines-1, 0, 1);
       colour = sketch.lerpColor(c1, c2, amount);
       sketch.stroke(colour);
-      sketch.strokeWeight(i/5);
+      sketch.strokeWeight(i/50);
 
       // Setup co-ordinates.
       let x1 = sketch.x1(time + i);
@@ -58,23 +58,36 @@ const seed = (sketch) => {
       let y2 = sketch.y2(time + i);
 
       // Second set of slower co-ordinates?
-      let x3 = sketch.x1(time + i/2);
-      let y3 = sketch.y1(time + i/2);
-      let x4 = sketch.x2(time + i/2);
-      let y4 = sketch.y2(time + i/2);
+      let x3 = sketch.x1(time + i*2);
+      let y3 = sketch.y1(time + i*2);
+      let x4 = sketch.x2(time + i*2);
+      let y4 = sketch.y2(time + i*2);
+
+      // Second set of slower co-ordinates?
+      let x5 = sketch.x1(time + i*4);
+      let y5 = sketch.y1(time + i*4);
+      let x6 = sketch.x2(time + i*4);
+      let y6 = sketch.y2(time + i*4);
 
       // Symmetry.
       sketch.line(x1, y1, x2, y2);
       sketch.line(x2, y2, x3, y3);
       sketch.line(x3, y3, x4, y4);
+      sketch.line(x4, y4, x5, y5);
+      sketch.line(x5, y5, x1, y1);
+
       sketch.line(-x1, -y1, -x2, -y2);
       sketch.line(-x2, -y2, -x3, -y3);
       sketch.line(-x3, -y3, -x4, -y4);
+      sketch.line(-x4, -y4, -x5, -y5);
+      sketch.line(-x5, -y5, -x1, -y1);
+      // sketch.line(-x1/3, y1*4, x2*5, y2);
+      // sketch.line(x1*2, y1*2, -x2, y2/2);
 
       // Wowee iterator.
       // time += Math.PI/100;
     };
-    time += 1;
+    time += 0.5;
     sketch.pop();
 
     // Draw text
@@ -83,14 +96,14 @@ const seed = (sketch) => {
 
   // Parametric Math functions.
   sketch.x1 = (t) => sketch.map(Math.sin(t/100), 0, 1, offset, sketch.width-offset)
-  sketch.y1 = (t) => sketch.map(Math.tan(t/50), 0, 1, offset, sketch.height-offset) // Tan or cos.
+  sketch.y1 = (t) => sketch.map(Math.cos(t/50), 0, 1, offset, sketch.height-offset) // Tan or cos.
   sketch.x2 = (t) => sketch.map(Math.sin(t/10), 0, 1, offset, sketch.width-offset)
   sketch.y2 = (t) => sketch.map(Math.cos(t/20), 0, 1, offset, sketch.height-offset) // Tan or cos either.
 
   // Type draw.
   sketch.title = (x,y) => {
     sketch.noStroke();
-    sketch.fill(0,100,100);
+    sketch.fill(100);
     sketch.text('Genera-', x, y);
     sketch.text('tive', x, y + 190);
     sketch.text('Gestal-', x, y + 380);
@@ -99,10 +112,11 @@ const seed = (sketch) => {
 
   // Controlled colour gradients.
   sketch.shakeColors = () => {
-    // c1 = sketch.color(sketch.random(200, 255), 200, sketch.random(100, 255));
-    // c2 = sketch.color(sketch.random(100, 255), 200, sketch.random(200, 255));
-    c1 = sketch.color('hsb(260, 100%, 100%)');
-    c2 = sketch.color('hsb(245, 100%, 100%)');
+    // c1 = sketch.color(sketch.random(200, 255),sketch.random(0, 100), 100);
+    // c2 = sketch.color(sketch.random(100, 255), 100, sketch.random(0, 100));
+    // 181129_204628_338_Colour1__rgba(144,120,255,1)_Colour2__rgba(0,241,169,1)
+    c1 = sketch.color('hsb(251, 53%, 100%)');
+    c2 = sketch.color('hsb(162, 100%, 94%)');
   }
 
   // Mouse click colour change.

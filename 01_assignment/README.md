@@ -10,4 +10,6 @@ Brief: Create a book cover image for a generative colour design book.
 4. [Parametrics](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.4/index.html)
 5. [Type](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.5/index.html)
 6. [Controlled Colour Set](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.6/index.html)
-2. [Final](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.7/index.html)
+7. [Final.0](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.7/index.html)
+8. [Final.1](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.8/index.html)
+9. [Final.2](https://larryzodiac.github.io/Creative-Coding/01_assignment/01.9/index.html)
