@@ -23,9 +23,11 @@ const seed = (sketch) => {
   sketch.draw = () => {
     sketch.translate(sketch.width/2,sketch.height/2);
     sketch.frameRate(30);
+    // Stroke weight experimentation
     sketch.stroke(sketch.frameCount/10,50,100);
     sketch.background(10,0.5);
 
+    // Multiple lines -> Pattern
     for (let i = 0; i < 30; i++) {
       let x1 = sketch.x1(sketch.frameCount + i);
       let y1 = sketch.y1(sketch.frameCount + i);

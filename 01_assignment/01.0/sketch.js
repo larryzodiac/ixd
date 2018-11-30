@@ -20,6 +20,7 @@ const seed = (sketch) => {
   sketch.draw = () => {
     // sketch.background(0);
     sketch.stroke(sketch.frameCount/10,0,50);
+    // Pass frameCount to Sine function.
     sketch.line(sketch.windowWidth/2, sketch.windowHeight, sketch.wow(sketch.frameCount), sketch.wow(sketch.frameCount/1000));
   };
 

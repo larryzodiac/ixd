@@ -7,6 +7,7 @@
 // ------------------------------------------------- //
 `use strict`;
 
+// Parametre
 let time = 0;
 
 const numLines = 45;
@@ -52,7 +53,7 @@ const seed = (sketch) => {
       sketch.line(x1, y1, x2, y2);
       sketch.line(-x1, -y1, -x2, -y2);
 
-      // Wowee iterator.
+      // Wowee iterator -> Parametric
       time += Math.PI/sketch.frameCount;
     };
   }

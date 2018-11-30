@@ -7,6 +7,7 @@
 // ------------------------------------------------- //
 `use strict`;
 
+// Meaningful variables
 const numLines = 30;
 let c1, c2, colour;
 
@@ -26,6 +27,7 @@ const seed = (sketch) => {
   }
 
   sketch.draw = () => {
+    // PLaying with dimensions.
     sketch.translate(sketch.width/2,sketch.height/2);
     sketch.scale(5);
     sketch.frameRate(20);
@@ -34,6 +36,7 @@ const seed = (sketch) => {
 
     for (let i = 0; i < numLines; i++) {
 
+      // Interpolation
       let amount = sketch.map(i, 0, numLines-1, 0, 1);
       colour = sketch.lerpColor(c1, c2, amount);
       sketch.stroke(colour);

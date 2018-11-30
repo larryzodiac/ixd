@@ -10,6 +10,7 @@
 let time = 0;
 
 const numLines = 45;
+// Positioning for map.
 const offset = 300;
 let c1, c2, colour;
 let type;
@@ -74,7 +75,7 @@ const seed = (sketch) => {
     sketch.title(sketch.width/5,sketch.height/3);
   }
 
-  // Parametric Math functions.
+  // Mapping to position output space of new patterns.
   sketch.x1 = (t) => {
     // return Math.sin(t/50) * 100 + Math.sin(t/5) * 20;
     return sketch.map(Math.sin(t/50), 0, 1, offset, sketch.width-offset)

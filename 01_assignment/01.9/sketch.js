@@ -79,11 +79,11 @@ const seed = (sketch) => {
     sketch.title(sketch.width/5,sketch.height/3);
   }
 
-  // Parametric Math functions.
+  // Experimentation for stills.
   sketch.x1 = (t) => sketch.map(Math.sin(t/100), 0, 1, offset, sketch.width-offset)
-  sketch.y1 = (t) => sketch.map(Math.tan(t/50), 0, 1, offset, sketch.height-offset) // Tan or cos.
+  sketch.y1 = (t) => sketch.map(Math.tan(t/50), 0, 1, offset, sketch.height-offset)
   sketch.x2 = (t) => sketch.map(Math.sin(t/10), 0, 1, offset, sketch.width-offset)
-  sketch.y2 = (t) => sketch.map(Math.cos(t/20), 0, 1, offset, sketch.height-offset) // Tan or cos either.
+  sketch.y2 = (t) => sketch.map(Math.cos(t/20), 0, 1, offset, sketch.height-offset)
 
   // Type draw.
   sketch.title = (x,y) => {
@@ -95,7 +95,7 @@ const seed = (sketch) => {
     sketch.text('tung', x, y + 570);
   }
 
-  // Controlled colour gradients.
+  // Colour for stills.
   sketch.shakeColors = () => {
     // c1 = sketch.color(sketch.random(200, 255),sketch.random(0, 100), 100);
     // c2 = sketch.color(sketch.random(100, 255), 100, sketch.random(0, 100));
