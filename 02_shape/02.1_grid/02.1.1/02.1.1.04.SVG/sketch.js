@@ -1,30 +1,9 @@
 // ------------------------------------------------- //
-// 14/01/19
+// 21/01/19
 // Evan MacHale - N00150552
-// Shape > Grid with Angles
+// Shape > Grid with Angles but w/ img
 // P_2_1_1_04 in Book
 // http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_1_04
-// ------------------------------------------------- //
-
-/*
-  Re-cap
-  Drawing patterns across a grid !!!
-  Remember nested for loops
-
-  Need to track number of tiles we want + tile widths:
-  const number-of-tiles = 3
-  const tile-width = width / number-of-tiles
-
-  pseudo-code:
-  for (grid-y ; i < number-of-tiles) {
-    for (grid-x) {
-      ...
-    }
-  }
-
-  Then after we will apply translations
-*/
-
 // ------------------------------------------------- //
 `use strict`;
 
@@ -33,8 +12,14 @@ let canvas;
 let number_of_tiles = 20;
 let tile_width;
 
+let img;
+
 // The seed that will spawn our p5 sketch.
 const seed = (sketch) => {
+
+  sketch.preload = () => {
+    img = sketch.loadImage('line.svg');
+  }
 
   sketch.setup = () => {
     let canvas_size = $('#canvas').width();
@@ -46,6 +31,8 @@ const seed = (sketch) => {
     canvas.parent('canvas');
     //
     tile_width = sketch.width / number_of_tiles;
+    img.loadPixels();
+    sketch.imageMode(sketch.CENTER);
   }
 
   sketch.draw = () => {
@@ -65,7 +52,8 @@ const seed = (sketch) => {
         sketch.push();
           sketch.translate(grid_x * tile_width + tile_width/2, grid_y * tile_width + tile_width/2);
           sketch.rotate(angle);
-          sketch.line(-tile_width/2, tile_width/2, tile_width/2, -tile_width/2);
+          // sketch.line(-tile_width/2, tile_width/2, tile_width/2, -tile_width/2);
+          sketch.image(img,0,0,50,50);
         sketch.pop();
       }
     }
