@@ -1,0 +1,13 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.83 70">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>hex</title>
+  <polygon class="cls-1" points="60.33 0.5 20.5 0.5 0.58 35 20.5 69.5 60.33 69.5 80.25 35 60.33 0.5"/>
+</svg>
