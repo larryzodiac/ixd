@@ -8,14 +8,40 @@ body {
   top: 0;
   font-size: 100%;
   overflow: hidden;
+  /* background-color: #fff; */
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 0.1rem solid #162BF4;
+}
+
+:root {
+  --mdc-theme-primary: #000;
+  --mdc-theme-secondary: #162BF4;
+  /* --mdc-theme-surface: #ff0000;
+  --mdc-theme-on-primary: #fff;
+  --mdc-theme-on-secondary: #fff; */
 }
 
 .control-panel {
-  /* width: 20%; */
   box-sizing: border-box;
   padding: 0.5rem 2rem;
+  border-right: 0.1rem solid rgba(0,0,0,0.10);
+  height: 60rem;
 }
 
-.sketch {
-  /* width: 80%; */
+.header {
+  /*  */
+}
+
+.sub-header {
+  /* font-family: 'IBM Plex Mono', monospace; */
+  /* font-weight: 100; */
+}
+
+.label {
+  margin-bottom: 0rem;
 }
