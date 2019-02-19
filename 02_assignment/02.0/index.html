@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 02.0</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/simple-grid.css">
+    <!-- Material Components -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+
+    <main class="container">
+
+      <section class="row">
+        <div class="col-2 control-panel">
+
+          <div class="row">
+            <p>Font Size</p>
+            <div class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider" aria-label="Select Value">
+              <div class="mdc-slider__track-container">
+                <div class="mdc-slider__track"></div>
+              </div>
+              <div class="mdc-slider__thumb-container">
+                <div class="mdc-slider__pin">
+                  <span class="mdc-slider__pin-value-marker"></span>
+                </div>
+                <svg class="mdc-slider__thumb" width="21" height="21">
+                  <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                </svg>
+                <div class="mdc-slider__focus-ring"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-10" id="canvas"></div>
+      </section>
+
+    </main>
+
+    <!-- ///////////////////////////////////////////// -->
+
+    <script src="sketch.js"></script>
+    <script src="material.js"></script>
+
+    <!-- ///////////////////////////////////////////// -->
+
+  </body>
+</html>
