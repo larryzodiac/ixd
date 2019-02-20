@@ -23,6 +23,9 @@ let font_size;
 let typed_text = 'Gestaltung';
 let text_graphic;
 let shape_size;
+let no_fill;
+let no_stroke;
+let stroke_weight;
 
 let point_density;
 
@@ -59,6 +62,10 @@ const seed = (sketch) => {
     shape_size_slider.min = 1;
     shape_size_slider.max = 30;
     shape_size_slider.value = 2;
+    // stroke weight
+    stroke_weight_slider.min = 1;
+    stroke_weight_slider.max = 10;
+    stroke_weight_slider.value = 1;
 
     // Defaults
     sketch.fill(0);
@@ -71,9 +78,18 @@ const seed = (sketch) => {
     sketch.background(255);
     draw_graphic();
 
+    // Grabbin values from inputs
     font_size = font_slider.value;
     point_density = point_density_slider.value;
     shape_size = shape_size_slider.value;
+    no_fill = no_fill_checkbox.checked;
+    no_stroke = stroke_checkbox.checked;
+    stroke_weight = stroke_weight_slider.value;
+
+    // Conditionals for values
+    !no_fill ? sketch.noFill() : sketch.fill(0);
+    !no_stroke ? sketch.noStroke() : sketch.stroke(0);
+    sketch.strokeWeight(stroke_weight);
 
     for (let y = 0; y < text_graphic.height; y += point_density) {
       for (let x = 0; x < text_graphic.width; x += point_density) {
