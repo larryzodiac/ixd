@@ -45,3 +45,11 @@ a {
 .label {
   margin-bottom: 0rem;
 }
+
+.fill-checkbox-field, .stroke-checkbox-field {
+  width: 100%;
+}
+
+.fill-checkbox, .stroke-checkbox {
+  margin-right: -11px;
+}
