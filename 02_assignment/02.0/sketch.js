@@ -35,7 +35,7 @@ let point_density;
 const seed = (sketch) => {
 
   sketch.preload = () => {
-    plex = sketch.loadFont('../../assets/IBMPlexSans-Regular.otf');
+    plex = sketch.loadFont('../assets/IBMPlexSans-Regular.otf');
   }
 
   // ------------------------------------------------- //
