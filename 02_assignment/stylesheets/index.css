@@ -19,11 +19,8 @@ a {
 }
 
 :root {
-  --mdc-theme-primary: #000;
+  --mdc-theme-primary: #162BF4;
   --mdc-theme-secondary: #162BF4;
-  /* --mdc-theme-surface: #ff0000;
-  --mdc-theme-on-primary: #fff;
-  --mdc-theme-on-secondary: #fff; */
 }
 
 .control-panel {
@@ -31,25 +28,25 @@ a {
   padding: 0.5rem 2rem;
   border-right: 0.1rem solid rgba(0,0,0,0.10);
   height: 60rem;
+  overflow: scroll;
 }
 
-.header {
-  /*  */
+.shape-select {
+  background-color: #fff !important;
 }
 
-.sub-header {
-  /* font-family: 'IBM Plex Mono', monospace; */
-  /* font-weight: 100; */
+.shape-select div{
+  border-color: #162BF4 !important;
 }
 
 .label {
   margin-bottom: 0rem;
 }
 
-.fill-checkbox-field, .stroke-checkbox-field {
+.fill-checkbox-field, .stroke-checkbox-field, .atan-checkbox-field, .shape-select {
   width: 100%;
 }
 
-.fill-checkbox, .stroke-checkbox {
+.fill-checkbox, .stroke-checkbox, .atan-checkbox {
   margin-right: -11px;
 }
