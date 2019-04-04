@@ -1,0 +1,138 @@
+/*
+  Evan MacHale - N00150552
+  01.04.19
+  App.scss
+*/
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:200,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400');
+
+// fonts
+$plex-serif: 'IBM Plex Serif', serif;
+$plex-sans-serif: 'IBM Plex Sans', sans-serif;
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$font-height: 1.5;
+
+// colors
+$dark-grey: #333447;
+$dark-gray: #333447; // for the Americans
+$black: #151515;
+
+// universal
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  // font-family: $font-family;
+  color: $black;
+}
+
+// typography
+
+.mdc-typography,
+.mdc-typography--headline2,
+.mdc-typography--headline3,
+.mdc-typography--headline5,
+.mdc-typography--headline6,
+.mdc-typography--subtitle1,
+.mdc-typography--subtitle2,
+.mdc-typography--body1,
+.mdc-typography--body2,
+.mdc-typography--caption,
+.mdc-typography--button,
+.mdc-typography--overline {
+  font-family: $plex-serif;
+}
+
+.type-light {
+  font-weight: $font-weight-light;
+}
+
+.type-regular {
+  font-weight: $font-weight-regular;
+}
+
+.type-heavy {
+  font-weight: $font-weight-heavy;
+}
+
+// utility
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+// Custom
+
+.heading {
+  height:100vh;
+  padding-top: 4rem;
+}
+
+// .mdc-typography--headline1 {
+.title {
+  font-family: $plex-serif;
+  font-size: calc(35px + 45 * ((100vw - 768px) / 952));
+  line-height: calc(55px + 45 * ((100vw - 768px) / 952));
+  letter-spacing: -.5px;
+  margin-bottom: 6rem;
+}
+
+.title-link {
+  margin-right: 1.44231rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  -webkit-transition: color .2s ease-out,border-bottom-color .2s ease-out;
+  transition: color .2s ease-out,border-bottom-color .2s ease-out;
+}
+
+.subtitle {
+  font-family: $plex-sans-serif;
+  font-size: calc(15px + 11 * ((100vw - 768px) / 952));
+  line-height: calc(25px + 11 * ((100vw - 768px) / 952));
+  margin-bottom: 6rem;
+}
+
+.link {
+  margin-right: 1.44231rem;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+  line-height: 45px;
+  font-size: 35px;
+  }
+}
