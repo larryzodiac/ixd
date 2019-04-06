@@ -37,8 +37,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 * {
-  // font-family: $font-family;
   color: $black;
 }
 
@@ -56,7 +59,7 @@ a {
 .mdc-typography--caption,
 .mdc-typography--button,
 .mdc-typography--overline {
-  font-family: $plex-serif;
+  font-family: $plex-sans-serif;
 }
 
 .type-light {
@@ -128,6 +131,15 @@ a {
 
 .link {
   margin-right: 1.44231rem;
+}
+
+.prelude-link {
+  border-bottom: 1px solid;
+}
+
+.prelude {
+  font-family: $plex-serif;
+  margin-top: 8rem
 }
 
 @media screen and (max-width: 768px) {

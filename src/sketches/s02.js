@@ -4,12 +4,12 @@
   00.js
 */
 
-const id = 's01';
+const id = 's02';
 let elw;
 let canvas;
 
 // The seed that will spawn our p5 sketch.
-const s01 = (p) => {
+const s02 = (p) => {
 
   p.setup = () => {
     elw = document.getElementById(id).offsetWidth;
@@ -20,38 +20,39 @@ const s01 = (p) => {
   }
 
   p.draw = () => {
+    p.translate(p.width/2,p.height/2);
     p.frameRate(30);
-    p.scale(0.5);
-    p.translate(p.width, p.height);
-    p.stroke(p.frameCount/5,70,80);
+    p.stroke(0);
     p.background(255,0.5);
-    for (let i = 0; i < 30; i++) {
+
+    for (let i = 0; i < 10; i++) {
       let x1 = p.x1(p.frameCount + i);
       let y1 = p.y1(p.frameCount + i);
       let x2 = p.x2(p.frameCount + i);
       let y2 = p.y2(p.frameCount + i);
+
+      // Opposite lines.
       p.line(x1, y1, x2, y2);
+      p.line(-x1, -y1, -x2, -y2);
+      p.line(y1, x1, y2, x2);
+      p.line(-y1, -x1, -y2, -x2);
     };
   }
   
   p.x1 = (i) => {
-    return Math.sin(i/10) * 500 + Math.sin(i/15) * 1000;
-    // return Math.sin(i/10) * 500;
+    return Math.sin(i/50) * 100;
   }
-
+  
   p.y1 = (i) => {
-    return p.map(Math.sin(i/10),-1,1,100,p.width-100)
-    // return Math.cos(i/15) * 500;
+    return Math.cos(i/10) * 200;
   }
-
+  
   p.x2 = (i) => {
-    return Math.sin(i/10) * 500 + Math.sin(i) * 2;
-    // return Math.sin(-i/15) * 500;
+    return Math.cos(i/50) * 500;
   }
-
+  
   p.y2 = (i) => {
-    return Math.sin(i/50) * 1000 + Math.cos(i/12) * 20;
-    // return Math.cos(i/15) * 100;
+    return Math.tan(i/100) * 50;
   }
   
   p.windowResized = () => {
@@ -60,4 +61,4 @@ const s01 = (p) => {
 
 }
 
-export default s01;
+export default s02;
