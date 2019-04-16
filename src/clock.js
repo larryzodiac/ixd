@@ -13,7 +13,7 @@
     mo = months[today.getMonth()],
     y = today.getFullYear();
     if(document.getElementById('clock')) {
-     document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + "<br/>" + d + "," + mo + "," + y + "<br/>" + "Kildare";  
+     document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + "<br/>" + d + ", " + mo + ", " + y + "<br/> Kildare";  
     }
     let t = setTimeout(function () {
       startTime()
