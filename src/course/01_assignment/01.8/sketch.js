@@ -23,9 +23,9 @@ const seed = (sketch) => {
   sketch.setup = () => {
     // Canvas A4.
     const canvas = sketch.createCanvas(1240,1748);
-    sketch.background(16,100,100);
+    sketch.background(255);
     // RGB is better for web gradients.
-    sketch.colorMode(sketch.HSB);
+    sketch.colorMode(sketch.RGB);
     // Dertermined gradient.
     sketch.shakeColors();
     sketch.strokeCap(sketch.SQUARE);
@@ -37,11 +37,11 @@ const seed = (sketch) => {
   sketch.draw = () => {
 
     sketch.frameRate(20);
-    // sketch.background(16,100,100);
+    sketch.background(255,0.5);
 
     // Draw multiple lines.
     sketch.push();
-    sketch.translate(sketch.width/2,sketch.height/2.5);
+    sketch.translate(sketch.width/2,sketch.height/2);
     sketch.rotate(time/20);
     for (let i = 0; i < numLines; i++) {
 
@@ -49,7 +49,7 @@ const seed = (sketch) => {
       let amount = sketch.map(i, 0, numLines-1, 0, 1);
       colour = sketch.lerpColor(c1, c2, amount);
       sketch.stroke(colour);
-      sketch.strokeWeight(i/50);
+      sketch.strokeWeight(i/10);
 
       // Setup co-ordinates.
       let x1 = sketch.x1(time + i);
@@ -103,7 +103,7 @@ const seed = (sketch) => {
   // Type draw.
   sketch.title = (x,y) => {
     sketch.noStroke();
-    sketch.fill(100);
+    sketch.fill(255);
     sketch.text('Genera-', x, y);
     sketch.text('tive', x, y + 190);
     sketch.text('Gestal-', x, y + 380);
@@ -115,8 +115,8 @@ const seed = (sketch) => {
     // c1 = sketch.color(sketch.random(200, 255),sketch.random(0, 100), 100);
     // c2 = sketch.color(sketch.random(100, 255), 100, sketch.random(0, 100));
     // 181129_204628_338_Colour1__rgba(144,120,255,1)_Colour2__rgba(0,241,169,1)
-    c1 = sketch.color('hsb(251, 53%, 100%)');
-    c2 = sketch.color('hsb(162, 100%, 94%)');
+    c1 = sketch.color('#fa709a');
+    c2 = sketch.color('#fee140');
   }
 
   // Mouse click colour change.
