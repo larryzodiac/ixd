@@ -10,7 +10,7 @@
 
 let time = 0; // Parametric variable.
 
-const numLines = 30; // Number of lines to draw.
+const numLines = 40; // Number of lines to draw.
 const offset = 300; // Page offset
 let c1, c2, colour; // Gradient c1 -> c2 + Interpolated colour
 let font; //Imported font.
@@ -23,7 +23,7 @@ const seed = (sketch) => {
   sketch.setup = () => {
     // Canvas A4.
     const canvas = sketch.createCanvas(1240,1748);
-    sketch.background(255);
+    sketch.background('#ffde03');
     // RGB is better for web gradients.
     sketch.colorMode(sketch.RGB);
     // Dertermined gradient.
@@ -37,19 +37,20 @@ const seed = (sketch) => {
   sketch.draw = () => {
 
     sketch.frameRate(20);
-    sketch.background(255,0.5);
+    sketch.background('#ffde03');
 
     // Draw multiple lines.
     sketch.push();
     sketch.translate(sketch.width/2,sketch.height/2);
     sketch.rotate(time/20);
+    sketch.scale(0.5);
     for (let i = 0; i < numLines; i++) {
 
       // Interpolation.
       let amount = sketch.map(i, 0, numLines-1, 0, 1);
       colour = sketch.lerpColor(c1, c2, amount);
       sketch.stroke(colour);
-      sketch.strokeWeight(i/10);
+      sketch.strokeWeight(i);
 
       // Setup co-ordinates.
       let x1 = sketch.x1(time + i);
@@ -103,7 +104,7 @@ const seed = (sketch) => {
   // Type draw.
   sketch.title = (x,y) => {
     sketch.noStroke();
-    sketch.fill(255);
+    sketch.fill(0);
     sketch.text('Genera-', x, y);
     sketch.text('tive', x, y + 190);
     sketch.text('Gestal-', x, y + 380);
@@ -115,8 +116,8 @@ const seed = (sketch) => {
     // c1 = sketch.color(sketch.random(200, 255),sketch.random(0, 100), 100);
     // c2 = sketch.color(sketch.random(100, 255), 100, sketch.random(0, 100));
     // 181129_204628_338_Colour1__rgba(144,120,255,1)_Colour2__rgba(0,241,169,1)
-    c1 = sketch.color('#fa709a');
-    c2 = sketch.color('#fee140');
+    c1 = sketch.color('#453a94');
+    c2 = sketch.color('#f43b47');
   }
 
   // Mouse click colour change.
