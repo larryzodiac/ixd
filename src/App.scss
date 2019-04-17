@@ -37,8 +37,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 * {
-  // font-family: $font-family;
   color: $black;
 }
 
@@ -56,7 +59,7 @@ a {
 .mdc-typography--caption,
 .mdc-typography--button,
 .mdc-typography--overline {
-  font-family: $plex-serif;
+  font-family: $plex-sans-serif;
 }
 
 .type-light {
@@ -99,10 +102,9 @@ a {
 
 .heading {
   height:100vh;
-  padding-top: 4rem;
+  padding-top: 12vh;
 }
 
-// .mdc-typography--headline1 {
 .title {
   font-family: $plex-serif;
   font-size: calc(35px + 45 * ((100vw - 768px) / 952));
@@ -121,8 +123,8 @@ a {
 
 .subtitle {
   font-family: $plex-sans-serif;
-  font-size: calc(15px + 11 * ((100vw - 768px) / 952));
-  line-height: calc(25px + 11 * ((100vw - 768px) / 952));
+  font-size: calc(25px + 11 * ((100vw - 768px) / 952));
+  line-height: calc(30px + 11 * ((100vw - 768px) / 952));
   margin-bottom: 6rem;
 }
 
@@ -130,9 +132,49 @@ a {
   margin-right: 1.44231rem;
 }
 
+.prelude-link {
+  border-bottom: 1px solid;
+}
+
+.prelude {
+  font-family: $plex-serif;
+  margin-top: 50vh;
+  margin-bottom: 50vh;
+}
+
+.sketch-grid {
+  padding: 0rem;
+}
+
+.sketch-grid-bottom {
+  padding-bottom: 20rem;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  height:100vh;
+  padding-top: 4rem;
+  padding-top: 5rem;
+}
+
 @media screen and (max-width: 768px) {
   .title {
-  line-height: 45px;
-  font-size: 35px;
+    line-height: 45px;
+    font-size: 35px;
+    margin-bottom: 10vh;
+  }
+  .subtitle {
+    margin-bottom: 25vh;
+  }
+  .heading {
+    padding-top: 2vh;
+  }
+  .footer p {
+    // line-height: 35px;
+    font-size: 30px;
   }
 }
