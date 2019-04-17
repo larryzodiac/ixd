@@ -152,7 +152,7 @@ const seed = (sketch) => {
     text_graphic.textFont(plex);
     text_graphic.textSize(font_size);
     text_graphic.textAlign(sketch.CENTER, sketch.CENTER);
-    text_graphic.text(typed_text, sketch.width/2, sketch.height/2.5);
+    text_graphic.text(typed_text, sketch.width/2, sketch.height/2);
     text_graphic.loadPixels();
   }
 
