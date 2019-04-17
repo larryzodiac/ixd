@@ -54,7 +54,7 @@ const seed = (sketch) => {
     // font size
     font_slider.min = 100;
     font_slider.max = 600;
-    font_slider.value = 250;
+    font_slider.value = 150;
     // font_slider.notifyChange = update_graphic();
     font_slider.listen('MDCSlider:change', () => update_graphic());
     // spawn slider
