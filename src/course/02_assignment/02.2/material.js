@@ -38,7 +38,7 @@ const atan_checkbox  = new MDCCheckbox(document.querySelector('.atan-checkbox'))
 const atan_checkbox_input = document.querySelector('.atan-checkbox input');
 
 // shape select not working
-const shape_select = new MDCSelect(document.querySelector('.shape-select'));
+// const shape_select = new MDCSelect(document.querySelector('.shape-select'));
 // const notchedOutline = new mdc.notchedOutline.MDCNotchedOutline(document.querySelector('.mdc-notched-outline'));
 // const shape_select = new mdc.select.MDCSelect(document.querySelector('.shape-select'));
 // shape_select.listen('MDCSelect:change', () => {
