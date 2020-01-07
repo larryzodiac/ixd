@@ -1,5 +1,5 @@
-# Creative Coding
+# ixd
 
-Year 4 Creative Coding portfolio website w/ [React](https://reactjs.org/), [Node](https://nodejs.org/en/) + [p5](https://p5js.org/)
+[MA] Interaction Design @ [NCAD](https://www.ncad.ie/postgraduate/school-of-design/ma-interaction-design/) 2019/2020 portfolio site under construction w/ [React](https://reactjs.org/), [Node](https://nodejs.org/en/) & [Carbon](https://www.carbondesignsystem.com/).
 
-Site hosted with [Glitch](https://glitch.com/) @ [https://larryzodiac-creative-coding.glitch.me/](https://larryzodiac-creative-coding.glitch.me/).
+I'll set it up on [Glitch](https://glitch.com/) soon, promise.
