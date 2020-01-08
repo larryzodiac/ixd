@@ -8,7 +8,7 @@ import React from 'react';
 import {Cell, Grid, Row} from '@material/react-layout-grid';
 // p5
 import p5 from 'p5';
-import sketch from '../sketches/sketch'
+import sketch from '../sketch'
 new p5(sketch,'canvas');
 
 function Home() {

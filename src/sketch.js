@@ -7,23 +7,23 @@
 const id = 'canvas';
 let elw;
 let canvas;
-let font;
+// let font;
 
 let count = 0;
 
 // The seed that will spawn our p5 sketch.
 const sketch = (p) => {
 
-  p.preload = () => {
-    font = p.loadFont('../../assets/IBMPlexSans-Regular.ttf');
-  }
+  // p.preload = () => {
+  //   font = p.loadFont('../../public/IBMPlexSans-Regular.ttf');
+  // }
 
   p.setup = () => {
     elw = document.getElementById(id).offsetWidth;
     let canvas_size = elw;
     canvas = p.createCanvas(canvas_size,canvas_size);
     canvas.parent(id);
-    p.textFont(font);
+    // p.textFont(font);
     p.textSize(40);
     p.textAlign(p.CENTER, p.CENTER);
     p.rectMode(p.CENTER);
@@ -32,7 +32,7 @@ const sketch = (p) => {
   p.draw = () => {
     p.clear();
     p.fill(0);
-    p.text('IxD', p.width/2, p.width/2.05);
+    p.text('IxD', p.width/1.99, p.width/1.98);
     p.noFill();
 
     count = p.constrain(p.mouseX, 10, p.width);
