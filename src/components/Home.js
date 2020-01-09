@@ -3,20 +3,28 @@
   Home.js
 */
 
-import React from 'react';
+import React, {useEffect} from 'react';
+// React Router
+import {Link} from "react-router-dom";
 // Material
 import {Cell, Grid, Row} from '@material/react-layout-grid';
 // p5
 import p5 from 'p5';
 import sketch from '../sketch'
-new p5(sketch,'canvas');
+import '../clock.js';
 
 function Home() {
+    // Similar to componentDidMount and componentDidUpdate:
+    useEffect(() => {
+      // Update the document title using the browser API
+      new p5(sketch,'canvas');
+    });
+
   return (
     <Grid>
       <Row>
-        <Cell desktopColumns={4} phoneColumns={0} tabletColumns={1} />
-        <Cell desktopColumns={4} phoneColumns={4} tabletColumns={6}>
+        <Cell desktopColumns={3} phoneColumns={0} tabletColumns={1} />
+        <Cell desktopColumns={6} phoneColumns={4} tabletColumns={6}>
           <header className="title">
             <h2>Interacting with Machines</h2>
           </header>
@@ -32,25 +40,31 @@ function Home() {
               Re-design a website
             */}
             <article className="article">
-              <h2>Man & Machine</h2>
-              <small>January 1, 2020 • ☕️☕️☕️☕️☕️ 26 min read</small>
-              <p>An introduction to design.</p>
+              <Link to="/man+machine">
+                <h2>Man & Machine</h2>
+                <small>January 1, 2020 • 26 min read</small>
+                <p>An introduction to design.</p>
+              </Link>
             </article>
             {/*
               Dating App
             */}
             <article className="article">
-              <h2>People & Place</h2>
-              <small>January 1, 2020 • ☕️☕️☕️☕️☕️ 26 min read</small>
-              <p>Love in a digital age.</p>
+              <Link to="/people+place">
+                <h2>People & Place</h2>
+                <small>January 1, 2020 • 26 min read</small>
+                <p>Love in a digital age.</p>
+              </Link>
             </article>
             {/*
               ServicED
             */}
             <article className="article">
-              <h2>ServicED</h2>
-              <small>January 1, 2020 • ☕️☕️☕️☕️☕️ 26 min read</small>
-              <p>What's the Matter at the Mater Hospital?</p>
+              <Link to="/servicED">
+                <h2>ServicED</h2>
+                <small>January 1, 2020 • 26 min read</small>
+                <p>What's the Matter at the Mater Hospital?</p>
+              </Link>
             </article>
           </section>
           <section className="about">
@@ -79,7 +93,7 @@ function Home() {
             <h4>Evan MacHale</h4>
           </footer>
         </Cell>
-        <Cell desktopColumns={4} phoneColumns={0} tabletColumns={1} />
+        <Cell desktopColumns={3} phoneColumns={0} tabletColumns={1} />
       </Row>
     </Grid>
   );
