@@ -1,5 +1,5 @@
 # ixd
 
-[MA] Interaction Design @ [NCAD](https://www.ncad.ie/postgraduate/school-of-design/ma-interaction-design/) 2019/2020 portfolio site under construction w/ [React](https://reactjs.org/), [Node](https://nodejs.org/en/) & [Carbon](https://www.carbondesignsystem.com/).
+[MA] Interaction Design @ [NCAD](https://www.ncad.ie/postgraduate/school-of-design/ma-interaction-design/) 2019/2020 portfolio site under construction w/ [React](https://reactjs.org/) & [Node](https://nodejs.org/en/).
 
-I'll set it up on [Glitch](https://glitch.com/) soon, promise.
+It's set up on [firebase](https://firebase.google.com/)! Give it a gawk @ [ixd.evanmachale.dev](https://ixd.evanmachale.dev/)
