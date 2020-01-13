@@ -23,13 +23,90 @@ function PeoplePlace() {
           <main>
             <header>
               <h1>People & Place</h1>
-              <span role="img" aria-label="watermelon">January 1, 2020 • 🍉🍉🍉🍉🍉🍉 26 min read</span>
+              <span role="img" aria-label="watermelon">2 October, 2019 • 10 min read</span>
             </header>
             <article>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero ligula, blandit ac congue in, malesuada aliquet nisl. Nulla hendrerit molestie feugiat. Nam erat lectus, dictum eget tincidunt ut, ultricies nec quam.</p>
-              <p>Sed massa enim, auctor non magna vitae, varius pulvinar velit. Fusce sodales nulla ut imperdiet efficitur. Cras lacus dui, lobortis eget tempus et, scelerisque id mi. Duis id ante sit amet quam ullamcorper consequat. Morbi sed auctor leo.</p>
+              <p>We are in an age of unforeseen connectivity where we are intimately linked to portable computers with the power to enrich our daily lives. However, so many of our interactions with technology are unrewarding, and lack real meaning for where we are and how we feel as humans.</p>
+              <p>In this project we were tasked with designing an innovative native app which improves the lives of its target users by addressing a phenomenon we can not evade; love in a digital age.</p>
+              <p>For this project we decided to focus on the topic of finding love.</p>
+              <h2>Order From Chaos</h2>
+              <p>Kicking off the project, we launched into secondary research, identiying existing trends and applications for our design challenge, before conjuring questions for some user research.</p>
+              <p>Once we had interviewed and observed our targeted users, we reconvened to unpack the richness of our data. We identified themes, insights and opportunities throughout the findings, saturating our workspace with post-its before orgainising it into an affinity diagram.</p>
+              <img src="../../assets/people+place/saturate-findings.jpg" alt="Saturate"/>
+              <img src="../../assets/people+place/discuss.jpeg" alt="Discussing"/>
+              <img src="../../assets/people+place/affinity-diagram.jpg" alt="Affinity Diagram"/>
+              <p>Having structured our insights, we began to come up with basic archetypes through which to categorise our users and their goals.</p>
+              <p>Using prsonas, scenarios, user journey maps amd empathy maps we learnt how to communicate these insights in ways that contextualise them. This would help us build empathy with out users and give us valuable references for the next stage of the design process: prototyping</p>
+              <img src="../../assets/people+place/goals.jpg" alt="Goals"/>
+              <img src="../../assets/people+place/personas.jpg" alt="Personas"/>
+              <img src="../../assets/people+place/empathy-map.jpg" alt="Empathy Map"/>
+              <h2>Key Insights</h2>
+              <p>After making a connection, we struggle to initiate conversation.</p>
+              <p>We want to know what others are planning.</p>
+              <p>We don’t take things at face value online.</p>
+              <p>We can never truly get to know someone online.</p>
+              <h2>Design Principles</h2>
+              <p>Breaking off from the group, it was time to start thinking about how I wanted the app to feel as a product. To help me in this I came up with six design principles to help me focus:</p>
+              <p>Minimalist: doing more with less(Hick's Law).</p>
+              <p>Unified: recognisable, repeatable, reusable solutuions(components).</p>
+              <p>Trustworthy: efforts for transparency(catfishing and intentions).</p>
+              <p>Ice breaking: providing the tools to initiate interactions and crutches to keep them going.</p>
+              <p>Evocative: focus on creating instense points and moments.</p>
+              <p>Fun: engagement in play.</p>
+              <h2>Marco Polo</h2>
+              <p>The first attempt.</p>
+              <p>I began the fledgeling steps of the design process, employing a fast, iterative, prototype driven design phase accompained by lots of testing. I ideated and defined key features, constantly asking "how might I…?"</p>
+              <p> The aim was to conceptualise fluidly on paper, testing in context as I went in order to produce greater levels of fidelity, refining my features and ideas.</p>
+              <img src="../../assets/people+place/sketches.png" alt="Sketches"/>
+              <img src="../../assets/people+place/paper-prototype.png" alt="Paper Prototype"/>
+              <p>At this point I had my first idea: Marco Polo.</p>
+              <p>A you can imagine, the dating app was to include a marco-polo game for finding your match when out on a date. Before meeting up, both users would agree on a rough area (map radius) to meet up in. With vibrations from shaking their phones and communicating with one another about the landmarks around them, the two would be lovers could take part in a game to break the ice and maybe create a few stories and memories along the way.</p>
+              <p>It's main feature would be a user feed wherein you could view a single profile's 'feed' at a time before making a decision. A user could then comment or like a user's content and send a match request in doing so. It also included a chatroulette, messages inbox, profile, and the marco polo game.</p>
+              <p>Sitemap:</p>
+              <img src="../../assets/people+place/sitemap-1.png" alt="Sitemap"/>
+              <p>Screen Flow:</p>
+              <img src="../../assets/people+place/screen-flow-1.png" alt="Screen Flow"/>
+              <h2>Testing</h2>
+              <p>Well, everyone hated it.</p>
+              <p>From my interviews and tests with my users it was clear Marco Polo wouldn't succeed. It was way too creepy.</p>
+              <p>Including this, I found that the onboarding needed to be simplified, user profiles were lacking richness and my system of liking and commenting on user 'cards' was confusing.</p>
+              <img src="../../assets/people+place/feedback-board.jpg" alt="Feedback Board"/>
+              <p>From the testing I discovered that some sort of game could be integrated with a user's profile feed. So I came up with a sort of change my mind game which could maybe evoke users into an emotional response, incentivising users to comment or like and break the ice.</p>
+              <img src="../../assets/people+place/change-my-mind.png" alt="Change My Mind"/>
+              <h2>Hot Takes</h2>
+              <p>At this point, as our designs began to coalesce, we began to focus on shifting our iterations to digital formats. We were fortunate to have Michell Mulvey from Fjord, a past student, running a full day workshop with us introducing us to visual design for screen and interactive prototyping in Adobe XD and Figma.</p>
+              <p>In the next few days we worked with design systems, component libraries, patterns, colour, typography, and my absolute favourite: responsive grids systems!</p>
+              <p>With these new skills under our belts we continued our quick iterations and testing building interactive digital prototypes of our final app designs.</p>
+              <img src="../../assets/people+place/screen-1.png" alt="Screen"/>
+              <p>Moving onto a second round of testing I realised that I was creating a complicated Tinder. Including too many yes/no options in one interface. To tackle this, I axed any sort of liking system and instead chose to prompt users to share their own opinions, and by extension, start a conversation.</p>
+              <p>I was in essence, I found I was allowing my users to have a go at their own hot takes.</p>
+              <p>"A superficially researched and hastily written piece that presents opinions as facts and is often moralistic."</p>
+              <p>Hot Takes was born.</p>
+              <img src="../../assets/people+place/screen-2.png" alt="Screen"/>
+              <img src="../../assets/people+place/screen-3.png" alt="Screen"/>
+              <p>Final sitemap:</p>
+              <img src="../../assets/people+place/sitemap-2.png" alt="Screen"/>
+              <p>Final screen flow:</p>
+              <img src="../../assets/people+place/screen-flow-2.png" alt="Screen"/>
+              <h2>Learning</h2>
+              <p>In my first project, prior to this one, we redesigned an existing experience. During the first two weeks of this project I learned how to research and design from scratch. It was not unlike my first project but was far, far more in-depth. I learned how to unpack a broad topic, how people feel about finding love online, identifying opportunities that I could build for and framing my users as archetypes that I could empathise with and reevaluate as my work evolved.</p>
+              <p>Personas make a huge difference in longer projects like this. I appreciated them more as I began to digitise my work, doing less testing and longer periods of building. I found they reign you in, reminding you of what they as users want to achieve. They're a nice, human centred reminder of what I saw and heard, what it means and why it matters. Order from the chaos.</p>
+              <p>From here we moved to digital prototyping and it was an absolute joy. Taking up something like Adobe XD and building a fully interactive fake app to test with was mind melting. With the help of the people around me I was able to super quickly build this stuff and test and test and test. From my experience developing apps, I loved things like grids and modular components. It was creatively liberating to say the least, to be given so much time to play with layout and colour.</p>
+              <p></p>
+              <p></p>
             </article>
           </main>
+          <footer>
+            <header className="footer-title">
+              <Link to="/">
+                <h3>Interacting with Machines</h3>
+              </Link>
+            </header>
+            <aside className="me footer-me">
+              <img src="https://pbs.twimg.com/profile_images/1000376034208952320/EgOBqvHA_400x400.jpg" alt="Me" width="20%" height="auto"/>
+              <p>Blog by <a href="https://github.com/larryzodiac" target="_new">Evan MacHale</a>.<br/>My journey with Interaction Design @ <a href="https://www.ncad.ie/postgraduate/school-of-design/ma-interaction-design/" target="_new">NCAD</a>.</p>
+            </aside>
+          </footer>
           <aside>
             <nav>
               <ul>

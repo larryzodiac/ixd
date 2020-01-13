@@ -49,6 +49,16 @@ span {
   font-weight: 200;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  image-orientation: from-image;
+}
+
+nav {
+  margin-bottom: 5rem;
+}
+
 // typography
 
 h1, h2, h3, h4, h5, h6 {
@@ -110,6 +120,11 @@ p {
   margin-bottom: 2.5rem;
 }
 
+.footer-title h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+}
+
 // Canvas
 
 .canvas {
@@ -122,6 +137,11 @@ p {
 .me {
   display: flex;
   margin-bottom: 2.5rem;
+}
+
+.footer-me {
+  margin-top: 1.5rem !important;
+  margin-bottom: 5rem;
 }
 
 .me img {

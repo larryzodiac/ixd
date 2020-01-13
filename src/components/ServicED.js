@@ -23,11 +23,11 @@ function ServicED() {
           <main>
             <header>
               <h1>ServicED</h1>
-              <span role="img" aria-label="watermelon">January 1, 2020 • 🍉🍉🍉🍉🍉🍉 26 min read</span>
+              <span role="img" aria-label="watermelon">January 1, 2020 • 🍉🍉🍉🍉🍉🍉 x min read</span>
             </header>
             <article>
+              <p>Coming soon, promise.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero ligula, blandit ac congue in, malesuada aliquet nisl. Nulla hendrerit molestie feugiat. Nam erat lectus, dictum eget tincidunt ut, ultricies nec quam.</p>
-              <p>Sed massa enim, auctor non magna vitae, varius pulvinar velit. Fusce sodales nulla ut imperdiet efficitur. Cras lacus dui, lobortis eget tempus et, scelerisque id mi. Duis id ante sit amet quam ullamcorper consequat. Morbi sed auctor leo.</p>
             </article>
           </main>
           <aside>

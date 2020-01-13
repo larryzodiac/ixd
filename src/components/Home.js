@@ -43,7 +43,7 @@ function Home() {
               <Link to="/man+machine">
                 <h2>Man & Machine</h2>
                 <small>January 1, 2020 • 26 min read</small>
-                <p>An introduction to design.</p>
+                <p>An introduction to design. Redesigning a website.</p>
               </Link>
             </article>
             {/*
@@ -53,7 +53,7 @@ function Home() {
               <Link to="/people+place">
                 <h2>People & Place</h2>
                 <small>January 1, 2020 • 26 min read</small>
-                <p>Love in a digital age.</p>
+                <p>Love in a digital age. Designing my first app</p>
               </Link>
             </article>
             {/*
@@ -63,7 +63,7 @@ function Home() {
               <Link to="/servicED">
                 <h2>ServicED</h2>
                 <small>January 1, 2020 • 26 min read</small>
-                <p>What's the Matter at the Mater Hospital?</p>
+                <p>What's the Matter at the Mater Hospital? Service Design.</p>
               </Link>
             </article>
           </section>
