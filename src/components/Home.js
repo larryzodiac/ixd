@@ -69,7 +69,8 @@ function Home() {
           </section>
           <section className="about">
             <h3>About Me</h3>
-            <p>I'm a multidisciplinary developer, aspiring designer & recent graduate with a first class honours awards classification from Dún Laoghaire's Institute of Art, Design & Technology studying a B.Sc [Hons] in Creative Computing. I'm currently attending The National College of Art & Design in Dublin having been accepted for a MA in Interaction Design.</p>
+            <p>I'm a multidisciplinary developer, aspiring designer & recent graduate with a first class honours awards classification from Dún Laoghaire's Institute of Art, Design & Technology studying a B.Sc [Hons] in Creative Computing. I'm currently attending The National College of Art & Design in Dublin having been accepted for a MA in Interaction Design. I love painting Warhammer and blurring the boundaries between design & code.</p>
+            <p></p>
           </section>
           <footer className="interwebs">
             <h3>Interwebs</h3>
