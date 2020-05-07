@@ -157,6 +157,14 @@ p {
   font-weight: $font-weight-heavy;
 }
 
+.activeKey {
+  color: #0D1EEC;
+}
+
+.inactiveKey {
+  color: #fff;
+}
+
 // Pages
 
 .side-title {
@@ -182,8 +190,17 @@ p {
   margin-top: -6px;
 }
 
+.info a {
+  color: #0D1EEC;
+  font-style: italic;
+}
+
 .interwebs a {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.8;
+}
+
+.interwebs a:hover {
+  color: #0D1EEC;
 }
