@@ -141,6 +141,7 @@ p {
   display: inline;
   float: left;
   margin-left: 0;
+  color: #0D1EEC;
   // Typography
   font-family: $font-family;
   font-size: 2.25em;
@@ -180,11 +181,63 @@ p {
   text-orientation: mixed;
 }
 
-.Dev {
-  width:75%;
-  height: 200%;
-  border: 6px solid #0D1EEC;
+// Dev + IxD Pages
+
+/*
+  Looping through each tile + setting each tile class in the row thingy
+*/
+
+.projects-container {
+  position: relative;
 }
+
+$project-tiles: 0, 1, 2;
+$front: 1;
+$behind: 0;
+$top: 0px;
+$left: 0px;
+
+@each $tile in $project-tiles {
+  .project-tile-#{$tile} {
+    position: absolute;
+    width: 75%;
+    z-index: $behind;
+    top: $top;
+    left: $left;
+  }
+  $top: $top + 50px;
+  $left: $left + 50px;
+}
+
+.project-figure {
+  overflow: hidden;
+  border: 6px solid #0D1EEC;
+  background-color: #fff;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  position: relative; /* If you want text inside of it */
+  margin: 0;
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/*
+  Now we need to do the hovering + z-indexing for each tile
+*/
+
+@each $tile in $project-tiles {
+  .project-tile-#{$tile}:hover {
+    z-index: $front;
+  }
+}
+
+// Info Page
 
 .info {
   margin-top: -6px;

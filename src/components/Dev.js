@@ -15,9 +15,10 @@ function Dev() {
       <Cell desktopColumns={1} phoneColumns={4} tabletColumns={1}>
         <header className="side-title">Software Development</header>
       </Cell>
-      <Cell desktopColumns={11} phoneColumns={4} tabletColumns={7}>
-        <section className="project"></section>
+      <Cell desktopColumns={7} phoneColumns={4} tabletColumns={6}>
+        <p className="info">Coming Soon.</p>
       </Cell>
+      <Cell desktopColumns={4} phoneColumns={4} tabletColumns={1} />
     </Row>
   );
 }
