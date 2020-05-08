@@ -1,6 +1,6 @@
 /*
   06/05/2020
-  Info.js
+  info.js
 */
 
 import React, {useEffect} from 'react';
@@ -9,9 +9,9 @@ import {Link} from "react-router-dom";
 // Material
 import {Cell, Row} from '@material/react-layout-grid';
 // Clock
-import '../clock.js';
+import '../../clock.js';
 
-function Info() {
+function info() {
   return (
     <Row>
       <Cell desktopColumns={1} phoneColumns={4} tabletColumns={1}>
@@ -44,4 +44,4 @@ function Info() {
   );
 }
 
-export default Info;
+export default info;

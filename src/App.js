@@ -14,10 +14,11 @@ import {
 // Material
 import {Cell, Grid, Row} from '@material/react-layout-grid';
 // My Components
-import Dev from './components/Dev';
-import IxD from './components/IxD';
-import CC from './components/CC';
-import Info from './components/Info';
+import dev from './components/main-pages/dev';
+import ixd from './components/main-pages/ixd';
+import cc from './components/main-pages/cc';
+import info from './components/main-pages/info';
+import hotTakes from './components/project-pages/hotTakes';
 
 class App extends React.Component {
   constructor(props) {
@@ -64,15 +65,18 @@ class App extends React.Component {
       <Grid className="grid">
         <Router>
           <div className="top-app-bar">
-            <header className="title">Evan MacHale</header>
+            <header className="title">Evan Mac Hale</header>
             <ul className="menu">
               {menuItems}
             </ul>
           </div>
-          <Route exact path="/" component={Dev}/>
-          <Route exact path="/IxD" component={IxD}/>
-          <Route exact path="/CC" component={CC}/>
-          <Route exact path="/Info" component={Info}/>
+          {/* Main Pages */}
+          <Route exact path="/" component={dev}/>
+          <Route exact path="/IxD" component={ixd}/>
+          <Route exact path="/CC" component={cc}/>
+          <Route exact path="/Info" component={info}/>
+          {/* Project Pages Pages */}
+          <Route exact path="/Hot-Takes" component={hotTakes}/>
         </Router>
       </Grid>
     );

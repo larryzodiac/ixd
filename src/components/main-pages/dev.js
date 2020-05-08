@@ -1,6 +1,6 @@
 /*
   06/05/2020
-  CC.js
+  dev.js
 */
 
 import React, {useEffect} from 'react';
@@ -9,11 +9,11 @@ import {Link} from "react-router-dom";
 // Material
 import {Cell, Row} from '@material/react-layout-grid';
 
-function CC() {
+function dev() {
   return (
     <Row>
       <Cell desktopColumns={1} phoneColumns={4} tabletColumns={1}>
-        <header className="side-title">Creative Coding</header>
+        <header className="side-title">Software Development</header>
       </Cell>
       <Cell desktopColumns={7} phoneColumns={4} tabletColumns={6}>
         <p className="info">Coming Soon.</p>
@@ -23,4 +23,4 @@ function CC() {
   );
 }
 
-export default CC;
+export default dev;
